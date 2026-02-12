@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌤 Weather App</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('search')">Search</a></li>
+        <li><a href="#" onclick="showPage('location')">My Location</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Page -->
+    <section id="home" class="page active">
+      <h2>Welcome</h2>
+      <p>Check the weather anywhere in the world. Use Search to find a city or My Location to get local weather.</p>
+    </section>
+
+    <!-- Search Page -->
+    <section id="search" class="page">
+      <h2>Search Weather</h2>
+      <div class="search-box">
+        <input type="text" id="city-input" placeholder="Enter city name">
+        <button id="search-btn">Search</button>
+      </div>
+      <div id="weather-result" class="weather-card hidden">
+        <h3 id="city-name"></h3>
+        <div class="weather-info">
+          <img id="weather-icon" alt="Weather Icon">
+          <p id="description"></p>
+        </div>
+        <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
+        <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+        <p><strong>Wind Speed:</strong> <span id="wind"></span> m/s</p>
+      </div>
+    </section>
+
+    <!-- Location Page -->
+    <section id="location" class="page">
+      <h2>Weather at My Location</h2>
+      <button id="loc-btn">Get My Weather</button>
+      <div id="loc-weather" class="weather-card hidden">
+        <h3 id="loc-city"></h3>
+        <div class="weather-info">
+          <img id="loc-icon" alt="Weather Icon">
+          <p id="loc-desc"></p>
+        </div>
+        <p><strong>Temperature:</strong> <span id="loc-temp"></span>°C</p>
+        <p><strong>Humidity:</strong> <span id="loc-humidity"></span>%</p>
+        <p><strong>Wind Speed:</strong> <span id="loc-wind"></span> m/s</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
